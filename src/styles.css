@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Dark-grayish-cyan-lighter: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-Light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+    --fs-v-s: .8rem;
+    --fs-s: 1.2rem;
+    --fs-m: 1.5rem;
+    --fs-b: 2rem;
+    --ff: 'Space Mono', monospace;
+    --fw-s: 400;
+    --fw-b: 700;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: var(--ff);
+  color: var(--Dark-grayish-cyan);
+
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.display {
+    position: relative;
+}
+input[type='text'] {
+    padding: 8px 18px;
+    text-align: right;
+    font-weight: var(--fw-b);
+    font-size: var(--fs-m);
+    color: var(--Very-dark-cyan);
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--Very-Light-grayish-cyan);
+    width: 100%;
+}
+input[type='text']:hover {
+    cursor: pointer;
+}
+input[type='text']:focus {
+    border: 2.5px solid var(--Strong-cyan);
+    outline: none;
+}
+.input-icon {
+    position: absolute;
+    left: 18px;
+    top: 48%;
+}
+.error-msg {
+    color: red;
+}
+.hidden {
+    visibility: hidden;
+}
+.splitter-container {
+    display: flex;
+    justify-content: center;
+    background-color: var(--Light-grayish-cyan);
+    background-image: url('/tip-calculator-app-main/images/logo.svg');
+    background-repeat: no-repeat;
+    background-size: 19%;
+    background-position: top 8% center;
+    padding-top: 9rem;
+}
+.splitter-child {
+    background-color: var(--White);
+    width: 100%;
+    border-top-left-radius: 8%;
+    border-top-right-radius: 8%;
+    padding: 2rem 3rem; 
+}
+.medium-text {
+    font-weight: var(--fw-b);
+}
+.tip-selection {
+    margin: 2rem 0;
+}
+
+/* margin under select tip */
+.tip-selection p {
+    margin-bottom: 15px;
+}
+.tip-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: auto;
+    text-align: center;
+    grid-column-gap: 1.5rem;
+    grid-row-gap: .4rem;
+}
+.tip-box {
+    border-radius: 5px;
+    padding: .3rem .5rem;
+    cursor: pointer;
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+    font-size: var(--fs-s);
+    font-weight: var(--fw-b);
+}
+.tip-box:hover  {
+    color: var(--White);
+    background-color: var(--Strong-cyan);
+}
+.preset-box {
+    color: var(--Very-Light-grayish-cyan);
+    background-color: var(--Very-dark-cyan);
+}
+.preset-box:hover {
+    color: var(--Very-dark-cyan);
+}
+.custom-box {
+    background-color: var(--Very-Light-grayish-cyan);
+    color: var(--Dark-grayish-cyan);
+}
+footer {
+    background-color: var(--Very-dark-cyan);
+    color: var(--Very-Light-grayish-cyan);
+    border-radius: 5px;
+    padding: 2rem;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+footer span {
+    color: var(--Strong-cyan);
+    font-weight: var(--fw-b);
+}
+.foot-cont {
+    display: flex;
+    justify-content: space-between;
+}
+#value {
+    color: var(--Strong-cyan);
+    font-size: var(--fs-b);
+}
+.total-amt-cont {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+#reset {
+    cursor: pointer;
+    background-color: var(--Strong-cyan);
+    border: none;
+    font-size: var(--fs-m);
+    font-weight: var(--fw-b);
+}
+
