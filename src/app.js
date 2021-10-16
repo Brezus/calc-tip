@@ -1,35 +1,47 @@
 window.addEventListener("DOMContentLoaded", (event) => {
   let tipsGrid = document.getElementById("tip-grid");
-  let billErrorMsg = document.querySelector(".error-msg");
+  let billErrorMsg = document.getElementById("first-error");
   let billInput = document.getElementById("bill-input");
+  let personErrorMsg = document.getElementById('second-error')
+  let personInput = document.getElementById('person-input')
+//   let customBox = document.querySelector('custom-box')
+//   console.log(customBox)
+
+
   let billInputInt;
 
-
-  function checkInput() {
+  function checkInput(input, msg) {
     //check if value entered is not a number
-    if (isNaN(billInput.value)) {
+    if (isNaN(input.value)) {
       //add error message
-      billErrorMsg.style.visibility = "visible";
+      msg.style.visibility = "visible";
     } else {
       //remove error message since it is a number
-      billInputInt = Number(billInput.value);
-      console.log(billInputInt);
-      billErrorMsg.style.visibility = "hidden";
-
+      inputInt = Number(input.value);
+      msg.style.visibility = "hidden";
     }
   }
+
   tipsGrid.addEventListener("click", (e) => {
-    checkInput();
+    checkInput(billInput, billErrorMsg);
+    // checkInput(personInput, personErrorMsg) for the second input that has to be a number
     if (
       e.target.className === "tip-box" ||
       e.target.className === "tip-box preset-box"
     ) {
-      //   console.log(e.target.innerHTML)
-      // the inner html of e.target has a value of string
-      // convert it to a number
       let formattedTarget = e.target.innerHTML.slice(0, -1);
+      // the button selected looses its last element (%) with this slice function
+      let formattedTargetPercent = formattedTarget / 100;
+      // divide the number value of button selected which is a str by 100 to calculate the percent value and turn to int
+      let percentOfVal = formattedTargetPercent * billInput.value;
+      // multiply the percent value by the value given by the user to find the percent of that give value
+      let percentOfValFormatted = Number(percentOfVal.toFixed(2))
+      //here we use toFixed function to remove excessive zeroes after the decimal point
     } else if (e.target.className === "tip-box custom-box") {
-      console.log("custom value");
+        let inputTag = document.createElement('input')
+        inputTag.innerHTML = e.target.innerHTML
+        inputTag.type = 'text'
+        e.target.parentNode.replaceChild(inputTag, e.target)
     }
   });
 });
