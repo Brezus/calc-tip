@@ -24,7 +24,7 @@
     <p medium-text>Bill</p>
     <input type="text" placeholder="0" id="bill-input">
     <img src="/tip-calculator-app-main/images/icon-dollar.svg" class='input-icon' alt="">
-    <small class="error-msg hidden">needs to be a number</small>
+    <small class="error-msg hidden" id="first-error">needs to be a number</small>
     </div>
 
  <div class="tip-selection">
@@ -42,9 +42,9 @@
   
   <div class="display display-head-count">
     <p class="medium-text">Number of People</p>
-  <input type="text" placeholder="0">
+  <input type="text" placeholder="0" id="person-input">
   <img src="/tip-calculator-app-main/images/icon-person.svg" class='input-icon' alt="">
-  <small class="error-msg hidden">cannot be zero</small>
+  <small class="error-msg hidden" id="second-error">cannot be zero</small>
   </div>
 
  <footer>
