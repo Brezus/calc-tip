@@ -11,8 +11,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
   console.log(customErrorMsg)
 
   customInput.addEventListener('input', function() {
-      checkInput(customInput, customErrorMsg)
-  })
+    checkInput(customInput, customErrorMsg)
+})
+
+personInput.addEventListener('input', function() {
+    checkInput(personInput, personErrorMsg)
+})
 
 window.onload = function() {
     // this function clears all data in all input fields
