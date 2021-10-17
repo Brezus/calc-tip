@@ -4,6 +4,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   let billInput = document.getElementById("bill-input");
   let personErrorMsg = document.getElementById('second-error')
   let personInput = document.getElementById('person-input')
+  let customInput = document.getElementById('custom-input')
 //   let customBox = document.querySelector('custom-box')
 //   console.log(customBox)
 
@@ -38,10 +39,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
       let percentOfValFormatted = Number(percentOfVal.toFixed(2))
       //here we use toFixed function to remove excessive zeroes after the decimal point
     } else if (e.target.className === "tip-box custom-box") {
-        let inputTag = document.createElement('input')
-        inputTag.innerHTML = e.target.innerHTML
-        inputTag.type = 'text'
-        e.target.parentNode.replaceChild(inputTag, e.target)
+        if (e.target.style.display === 'block') {
+            e.target.style.display = 'none'
+            customInput.classList.remove('hidden')
+        } else {
+            e.target.style.display = 'block'
+            customInput.classList.add('hidden')
+        }
     }
   });
 });
