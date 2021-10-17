@@ -24,7 +24,7 @@
     <p medium-text>Bill</p>
     <input type="text" placeholder="0" id="bill-input">
     <img src="/tip-calculator-app-main/images/icon-dollar.svg" class='input-icon' alt="">
-    <small class="error-msg hidden" id="first-error">needs to be a number</small>
+    <small class="error-msg hidden" id="first-error">needs to be a number with no symbols</small>
     </div>
 
  <div class="tip-selection">
@@ -36,7 +36,8 @@
     <p class="tip-box preset-box" id="tipbox">25%</p>
     <p class="tip-box preset-box" id="tipbox">50%</p>
     <p class="tip-box custom-box" id="tipbox">Custom</p>
-    <input type="text" class="custom-input hidden" id="custom-input">
+    <input type="text" class="custom-input hidden" id="custom-input" placeholder="Custom">
+    <p class="custom-input-error-msg hidden">has to be number without symbols</p>
   </div>
  </div>
 
