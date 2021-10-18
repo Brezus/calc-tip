@@ -46,7 +46,7 @@
     <p class="medium-text">Number of People</p>
   <input type="text" placeholder="0" id="person-input">
   <img src="/tip-calculator-app-main/images/icon-person.svg" class='input-icon' alt="">
-  <small class="error-msg hidden" id="second-error">cannot be zero</small>
+  <small class="error-msg hidden" id="second-error">has to be a number greater than zero</small>
   </div>
 
  <footer>
@@ -55,7 +55,7 @@
     <p>Tip Amount</p>
   <span>/ person</span>
   </div>
-    <p id="value">$0.00</p>
+    <p id="value" class="tip-amt">$0.00</p>
   </div>
 
   
@@ -64,7 +64,7 @@
       <p>Total</p>
     <span>/ person</span>
     </div>
-      <p id="value">$0.00</p>
+      <p id="value" class="total-amt">$0.00</p>
     </div>
 
   <button id="reset">Reset</button>
