@@ -116,7 +116,7 @@ input[type='text']:hover {
 .input-icon {
     position: absolute;
     left: 18px;
-    top: 48%;
+    top: 59%;
 }
 .error-msg {
     color: red;
