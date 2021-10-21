@@ -32,8 +32,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
     personInput.value = "";
     billInput.value = "";
     customInput.value = "";
-    firstVal.innerHTML = "$0.00";
-    lastVal.innerHTML = "$0.00";
+    results[0].innerHTML = "$0.00";
+    results[1].innerHTML = "$0.00";
   });
 
   billInput.addEventListener("input", function () {
