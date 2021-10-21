@@ -253,8 +253,8 @@ footer span {
         height: 100vh;
         display: grid;
         place-items: center;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 1fr;
         padding-top: 0;
     }
     .splitter-child {
@@ -264,7 +264,13 @@ footer span {
         max-width: 900px;
         border-radius: 20px;
         padding-top: 0;
+        grid-row: 1 / -1;
+        grid-column: 1 / -1;
         /* height: 70%; */
+    }
+    .attribution {
+        grid-row: 2;
+        grid-column: 1/-1;
     }
     .main {
         width: 48%;
