@@ -20,34 +20,35 @@
   <div class="splitter-container">
 
   <div class="splitter-child">
+   <div class="main">
     <div class="display display-bill">
-    <p medium-text>Bill</p>
-    <input type="text" placeholder="0" id="bill-input">
-    <img src="/tip-calculator-app-main/images/icon-dollar.svg" class='input-icon' alt="">
-    <small class="error-msg hidden" id="first-error">needs to be a number with no symbols</small>
-    </div>
-
- <div class="tip-selection">
-  <p class='medium-text'>Select Tip %</p>
-  <div class="tip-grid" id="tip-grid">
-    <p class="tip-box preset-box" id="tipboxx">5%</p>
-    <p class="tip-box preset-box" id="tipbox">10%</p>
-    <p class="tip-box" id="tipbox">15%</p>
-    <p class="tip-box preset-box" id="tipbox">25%</p>
-    <p class="tip-box preset-box" id="tipbox">50%</p>
-    <p class="tip-box custom-box" id="tipbox">Custom</p>
-    <input type="text" class="custom-input hidden" id="custom-input" placeholder="Custom">
-    <p class="custom-input-error-msg hidden">has to be number without symbols</p>
-  </div>
- </div>
-
+      <p medium-text>Bill</p>
+      <input type="text" placeholder="0" id="bill-input">
+      <img src="/tip-calculator-app-main/images/icon-dollar.svg" class='input-icon' alt="">
+      </div>
   
-  <div class="display display-head-count">
-    <p class="medium-text">Number of People</p>
-  <input type="text" placeholder="0" id="person-input">
-  <img src="/tip-calculator-app-main/images/icon-person.svg" class='input-icon' alt="">
-  <small class="error-msg hidden" id="second-error">has to be a number greater than zero</small>
-  </div>
+   <div class="tip-selection">
+    <p class='medium-text'>Select Tip %</p>
+    <div class="tip-grid" id="tip-grid">
+      <p class="tip-box preset-box" id="tipboxx">5%</p>
+      <p class="tip-box preset-box" id="tipbox">10%</p>
+      <p class="tip-box" id="tipbox">15%</p>
+      <p class="tip-box preset-box" id="tipbox">25%</p>
+      <p class="tip-box preset-box" id="tipbox">50%</p>
+      <input type="text" class="custom-input" id="custom-input" placeholder="Custom">
+    </div>
+   </div>
+  
+    
+    <div class="display display-head-count">
+      <div class="people-text">
+        <p class="medium-text">Number of People</p>
+    <small class="error-msg hidden" id="second-error">can't be zero</small>
+      </div>
+    <input type="text" placeholder="0" id="person-input">
+    <img src="/tip-calculator-app-main/images/icon-person.svg" class='input-icon' alt="">
+    </div>
+   </div>
 
  <footer>
   <div class="foot-cont tip-amt-cont">
@@ -55,7 +56,7 @@
     <p>Tip Amount</p>
   <span>/ person</span>
   </div>
-    <p id="value" class="tip-amt">$0.00</p>
+    <p id="value" class="tip-amt amt">$0.00</p>
   </div>
 
   
@@ -64,7 +65,7 @@
       <p>Total</p>
     <span>/ person</span>
     </div>
-      <p id="value" class="total-amt">$0.00</p>
+      <p id="value" class="total-amt amt">$0.00</p>
     </div>
 
   <button id="reset">Reset</button>
