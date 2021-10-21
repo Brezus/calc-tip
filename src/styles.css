@@ -241,10 +241,7 @@ footer span {
     font-weight: var(--fw-b);
     color: var(--Very-dark-cyan);
 }
-.attribution {
-    position: absolute;
-    bottom: 0;
-}
+
 @media screen and (min-width: 600px) {
     .tip-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -254,9 +251,10 @@ footer span {
 @media screen and (min-width: 700px) {
     .splitter-container {
         height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: grid;
+        place-items: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
         padding-top: 0;
     }
     .splitter-child {
