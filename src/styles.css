@@ -223,6 +223,10 @@ footer span {
 .foot-cont {
     display: flex;
     justify-content: space-between;
+    gap: 1.5rem;
+}
+.tips p, .total p {
+    word-break: break-all;
 }
 #value {
     color: var(--Strong-cyan);
