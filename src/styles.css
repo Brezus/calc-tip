@@ -250,12 +250,12 @@ footer span {
 }
 @media screen and (min-width: 700px) {
     .splitter-container {
-        height: 100vh;
+        min-height: 100vh;
         display: grid;
         place-items: center;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 2fr 1fr;
-        padding-top: 0;
+        padding: 3rem 0;
     }
     .splitter-child {
         display: flex;
